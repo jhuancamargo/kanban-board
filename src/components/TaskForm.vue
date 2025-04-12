@@ -2,17 +2,17 @@
     <div class="task-form">
       <form @submit.prevent="handleSubmit">
         <div class="form-group">
-          <input v-model="task.title" type="text" placeholder="Task Title" required class="form-input">
+          <input v-model="task.title" type="text" placeholder="Título" required class="form-input">
         </div>
         <div class="form-group">
-          <textarea v-model="task.description" placeholder="Description (optional)" class="form-textarea"></textarea>
+          <textarea v-model="task.description" placeholder="Descrição" class="form-textarea"></textarea>
         </div>
         <div class="form-group">
           <input v-model="task.dueDate" type="date" class="form-input">
         </div>
         <div class="form-actions">
           <button type="submit" class="submit-btn" :disabled="isSubmitting">
-            {{ isEditing ? 'Update Task' : 'Add Task' }}
+            {{ isEditing ? 'Atualizar Task' : 'Nova Task' }}
           </button>
         </div>
       </form>
